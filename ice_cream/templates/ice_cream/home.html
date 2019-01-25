@@ -2,6 +2,13 @@
 
 {% block content %}
 
-    <h2>What's Your Flavor?</h2>
+    <h2>Offerings</h2>
+
+    <h3>Featured</h3>
+    {% for dessert in IceCream %}
+        featured = IceCream.objects.filter(featured=True)
+        all_ice_cream = IceCream.objects.all()
+    {% endfor %}
+
 
 {% endblock %}
