@@ -2,13 +2,26 @@
 
 {% block content %}
 
-    <h2>Offerings</h2>
+    <h2>Menu</h2>
 
     <h3>Featured</h3>
-    {% for dessert in IceCream %}
-        featured = IceCream.objects.filter(featured=True)
-        all_ice_cream = IceCream.objects.all()
-    {% endfor %}
+        {% for feature in featured %}
+        {{ feature.flavor }}
+        {% endfor %}
 
+    <h3>Daily Flavor</h3>
+        {% for today in daily %}
+        {{ daily.flavor }}
+        {% endfor %}
+
+    <h3>Our Weekly Flavors</h3>
+        {% for week in weekly %}
+        {{ weekly.flavor }}
+        {% endfor %}
+
+    <h3>Seasonal Flavors</h3>
+        {% for season in seasonal %}
+        {{ seasonal.flavor }}
+        {% endfor %}
 
 {% endblock %}
