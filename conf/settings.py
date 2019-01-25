@@ -40,7 +40,10 @@ SECRET_KEY = 'vs$vcx8#biv4ru4$ar*(y#$-532(b6y3+adp)rhum@m1bfyu9r'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'localhost',
+    'icecream3--3.herokuapp.com/'
+]
 
 
 # Application definition
