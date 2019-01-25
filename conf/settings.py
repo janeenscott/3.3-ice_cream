@@ -42,6 +42,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     'localhost',
+    '127.0.0.1',
     'icecream3--3.herokuapp.com/'
 ]
 

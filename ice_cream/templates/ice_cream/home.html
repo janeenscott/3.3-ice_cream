@@ -4,24 +4,48 @@
 
     <h2>Menu</h2>
 
+<!--<-->
+
+    <h1>All flavors</h1>
+        {% for flavor in all %}
+      <ul>
+      <li>
+        {{ flavor.flavor }}
+        {{ flavor.base }}
+        {{ flavor.availability }}
+        {{ flavor.featured }}
+        <p class="hidden">{{ flavor.date_churned }}</p>
+        <button class="flavor">Date Churned</button>
+      </li>
+      </ul>
+        {% endfor %}
+
     <h3>Featured</h3>
         {% for feature in featured %}
-        {{ feature.flavor }}
+        <ul>
+        <li>
+            {{ feature.flavor }} <p id="demo">How Fresh?</p>
+        </li>
+        </ul>
         {% endfor %}
 
     <h3>Daily Flavor</h3>
         {% for today in daily %}
-        {{ daily.flavor }}
+        <ul>
+        <li>
+            {{ today.flavor }}
+        </li>
+        </ul>
         {% endfor %}
 
     <h3>Our Weekly Flavors</h3>
         {% for week in weekly %}
-        {{ weekly.flavor }}
+        {{ week.flavor }}
         {% endfor %}
 
     <h3>Seasonal Flavors</h3>
         {% for season in seasonal %}
-        {{ seasonal.flavor }}
+        {{ season.flavor }}
         {% endfor %}
 
 {% endblock %}

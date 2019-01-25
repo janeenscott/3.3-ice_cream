@@ -3,14 +3,20 @@ from django.db import models
 
 
 class IceCream (models.Model):
+    CHOCOLATE = 'Chocolate'
+    VANILLA = 'Vanilla'
+
     base_flavor = (
-        ('chocolate', 'Chocolate'),
-        ('vanilla', 'Vanilla'),
+        (CHOCOLATE, 'Chocolate'),
+        (VANILLA, 'Vanilla'),
     )
+    DAILY = 'Daily'
+    WEEKLY = 'Weekly'
+    SEASONAL = 'Seasonal'
     available = (
-        ('daily', 'Daily'),
-        ('weekly', 'Weekly'),
-        ('seasonal', 'Seasonal'),
+        (DAILY, 'Daily'),
+        (WEEKLY, 'Weekly'),
+        (SEASONAL, 'Seasonal'),
     )
     flavor = models.CharField(max_length=100)
     base = models.CharField(max_length=100, choices=base_flavor, default='Vanilla')

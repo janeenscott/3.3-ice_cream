@@ -8,15 +8,17 @@ class HomeView(TemplateView):
 
     def get_context_data(self, **kwargs):
         featured_flavors = IceCream.objects.filter(featured=True)
-        daily_flavors = IceCream.objects.filter(availability='daily')
-        weekly_flavors = IceCream.objects.filter(availability='weekly')
-        seasonal_flavors = IceCream.objects.filter(availability='seasonal')
+        daily_flavors = IceCream.objects.filter(availability='Daily')
+        weekly_flavors = IceCream.objects.filter(availability='Weekly')
+        seasonal_flavors = IceCream.objects.filter(availability='Seasonal')
+        all_flavors = IceCream.objects.all()
 
         context = {
             'featured': featured_flavors,
             'daily': daily_flavors,
             'weekly': weekly_flavors,
-            'seasonal': seasonal_flavors
+            'seasonal': seasonal_flavors,
+            'all': all_flavors
         }
 
         return context
