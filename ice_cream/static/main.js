@@ -1,3 +1,6 @@
+document.querySelector('button').addEventListener('click', function() {
+    document.querySelector('.churn-date').classList.toggle('hidden');
+});
 
 
 let buttons = document.querySelectorAll('.flavor');
